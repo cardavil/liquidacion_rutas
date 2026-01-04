@@ -1,0 +1,21 @@
+/* ===== Escritorio / pantallas anchas ===== */
+@media (min-width:901px){
+  /* Igualar alturas como en la versión 3-HTML */
+  .side{
+    height:auto;            /* anula fijo */
+    min-height:78vh;        /* piso visual similar al visor */
+    overflow:auto;
+  }
+  .main iframe{
+    min-height:78vh;        /* igual piso que el sidebar */
+  }
+
+  /* Header horizontal “logo a izq / botones a der” */
+  .header{
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .header .brand{justify-content:flex-start}
+  .header .top-buttons{justify-content:flex-end}
+}
