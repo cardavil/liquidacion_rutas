@@ -1,0 +1,104 @@
+/* --- Móvil vertical: igual al 3-HTML --- */
+@media (max-width:700px){
+  .header{
+    display:flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .header .brand{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+    text-align: left;
+  }
+
+  .header .top-buttons{
+    order: 2;
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    justify-content: center;   /* centra los botones */
+    flex-wrap: nowrap;         /* evita saltos o doble fila */
+  }
+  .header .top-buttons .open{
+    flex: 1 1 auto;
+    width: auto;
+  }
+
+  .header .acronym{ font-size:18px }
+  .header .expansion{ font-size:11px }
+
+  /* Apilado vertical (layout una sola columna) */
+  .layout{ flex-direction: column; }
+
+  /* Sidebar ancho completo */
+  .side{
+    width:100%;
+    box-sizing:border-box;
+    height:auto;
+    min-height:auto;
+    overflow:auto;
+  }
+}
+
+/* ===== Móvil horizontal (apaisado) ===== */
+@media (max-width:900px) and (min-aspect-ratio:1/1){
+  .layout{
+    display:flex;
+    flex-direction:row;      /* lado a lado */
+    align-items:stretch;     /* misma altura real */
+    gap:16px;
+    flex-wrap: nowrap;       /* evita que el visor salte debajo */
+    min-width: 0;
+  }
+
+  /* Header: en fila, logo a izq y botones a der */
+  .header{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header .top-buttons{
+    order: 0;
+    width: auto;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+  }
+  .header .top-buttons .open{
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  /* Sidebar flexible (~38%) */
+  .side{
+    width:auto;
+    min-width:0;
+    flex:0 1 38%;            /* puede encogerse si falta espacio */
+    max-width:38%;
+    box-sizing:border-box;
+    height:auto;
+    min-height:auto;
+    overflow:auto;
+  }
+
+  /* Visor flexible (~62%) */
+  .main{
+    min-width:0;
+    flex:1 1 62%;            /* se ajusta con el espacio restante */
+    max-width:62%;
+    height:auto;
+    min-height:auto;
+  }
+
+  /* Altura del iframe (viewport horizontal) */
+  .main iframe{
+    min-height:70svh;
+  }
+}
