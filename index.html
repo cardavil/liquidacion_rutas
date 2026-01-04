@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>C.A.R.G.O</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS divididos -->
+  <link rel="stylesheet" href="./assets/styles_base.css">
+  <link rel="stylesheet" href="./assets/styles_desktop.css">
+  <link rel="stylesheet" href="./assets/styles_mobile.css">
+</head>
+<body>
+  <div class="wrap" id="app">
+    <!-- Header -->
+    <div id="header" class="header"></div>
+
+    <!-- Contenido principal -->
+    <div class="layout">
+      <!-- OJO: aquí va SOLO el contenedor con borde; el contenido del sidebar NO trae otro <aside> -->
+      <aside class="side" id="sidebar"></aside>
+
+      <!-- OJO: contenedor externo del visor. El contenido del viewer NO trae otro <section> -->
+      <section class="main" id="viewerContainer"></section>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer" class="footer"></div>
+  </div>
+
+  <!-- JS plano, sin módulos -->
+  <script src="./assets/main.js"></script>
+</body>
+</html>
